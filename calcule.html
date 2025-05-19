@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="calcule.css">
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo"></div>
+    <nav>
+      <ul>
+        <li><a class="otherbtn" href="#">Botão</a></li>
+        <li><a class="otherbtn" href="#">Botão</a></li>
+        <li><a class="otherbtn" href="#">Botão</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="form-container">
+    <label for="tipoCalculo">Tipo de cálculo:</label>
+    <select id="tipoCalculo" onchange="atualizarFormulario()">
+      <option value="imc">IMC</option>
+      <option value="tmb">TMB (Taxa Metabólica Basal)</option>
+      <option value="calorias">Calorias</option>
+      <option value="agua">Água</option>
+    </select>
+
+    <div id="inputs"></div>
+
+    <button onclick="calcular()">Calcular</button>
+
+    <div class="resultados" id="resultados"></div>
+  </div>
+
+  <script src="calcule.js"></script>
+</body>
+</html>
